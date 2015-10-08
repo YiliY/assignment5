@@ -14,7 +14,6 @@ from operator import attrgetter
 from data import Data
 from model import Room, Message, Dwarf, Pirate
 
-YESNO_ANSWERS = {'y': True, 'yes': True, 'n': False, 'no': False}
 
 class Game(Data):
 
@@ -431,19 +430,24 @@ class Game(Data):
         return self.output
 
     def _do_command(self, words):
+	### Changed _do_command to find words[0]
+	### in tuples of valid input words, instead of in
+	### dictionary.
         if self.yesno_callback is not None:
-            answer = YESNO_ANSWERS.get(words[0], None)
-            if answer is None:
+            if words[0] in ('y','yes'):
+                answer = True
+            elif words[0] in ('n', 'no'):
+                answer = False
+            else:
                 if self.yesno_casual:
                     self.yesno_callback = None
                 else:
                     self.write('Please answer the question.')
                     return
-            else:
-                callback = self.yesno_callback
-                self.yesno_callback = None
-                callback(answer)
-                return
+            callback = self.yesno_callback
+            self.yesno_callback = None
+            callback(answer)
+            return
 
         if self.is_dead:
             self.write('You have gotten yourself killed.')

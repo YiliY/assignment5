@@ -1,0 +1,12 @@
+MODULES_MANAGER_V2
+__init__|/home/ds-ga-1007/git/assignment5/buj201/adventure/tests/__init__.py
+adventure|/home/ds-ga-1007/git/assignment5/buj201/adventure/adventure.py
+data|/home/ds-ga-1007/git/assignment5/buj201/adventure/data.py
+game|/home/ds-ga-1007/git/assignment5/buj201/adventure/game.py
+model|/home/ds-ga-1007/git/assignment5/buj201/adventure/model.py
+play|/home/ds-ga-1007/git/assignment5/buj201/adventure/play.py
+prompt|/home/ds-ga-1007/git/assignment5/buj201/adventure/prompt.py
+test_commands|/home/ds-ga-1007/git/assignment5/buj201/adventure/tests/test_commands.py
+test_data|/home/ds-ga-1007/git/assignment5/buj201/adventure/tests/test_data.py
+test_walks|/home/ds-ga-1007/git/assignment5/buj201/adventure/tests/test_walks.py
+tests.test_commands|/home/ds-ga-1007/git/assignment5/buj201/adventure/tests/test_commands.py
