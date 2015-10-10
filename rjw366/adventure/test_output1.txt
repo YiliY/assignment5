@@ -1,0 +1,8 @@
+Output for y: True
+Output for yes: True
+Output for no: False
+Output for maybe: PLEASE ANSWER THE QUESTION.
+Output for n: False
+Output for yessir: True
+Output for yes please: True
+Output for stop: PLEASE ANSWER THE QUESTION.
