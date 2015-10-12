@@ -14,7 +14,8 @@ from operator import attrgetter
 from data import Data
 from model import Room, Message, Dwarf, Pirate
 
-YESNO_ANSWERS = {'y': True, 'yes': True, 'n': False, 'no': False}
+YES_ANSWERS = ['y', 'yes']
+NO_ANSWERS = ['n', 'no']
 
 class Game(Data):
 
@@ -431,9 +432,10 @@ class Game(Data):
         return self.output
 
     def _do_command(self, words):
-        if self.yesno_callback is not None:
-            answer = YESNO_ANSWERS.get(words[0], None)
-            if answer is None:
+        if self.yesno_callback is not None:            
+            # If the first word is not a valid YES response or NO response,
+            # ask user for another response, unless yesno_casual is True
+            if words[0] not in YES_ANSWERS and words[0] not in NO_ANSWERS:
                 if self.yesno_casual:
                     self.yesno_callback = None
                 else:
@@ -442,7 +444,11 @@ class Game(Data):
             else:
                 callback = self.yesno_callback
                 self.yesno_callback = None
-                callback(answer)
+                # If response is a valid YES, run the callback with the argument True
+                if words[0] in YES_ANSWERS:
+                    callback(True)
+                elif words[0] in NO_ANSWERS: # A valid NO so pass callback FALSE
+                    callback(False)
                 return
 
         if self.is_dead:
