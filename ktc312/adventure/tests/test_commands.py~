@@ -47,10 +47,11 @@ class CommandTest(unittest.TestCase):
             game.do_command(['no'])
 
 if __name__ == '__main__':
-	log_file = 'test_output1.txt'
-	text_file = open(log_file,'w')
-	runner = unittest.TextTestRunner(text_file)
-	unittest.main(testRunner=runner)
-	text_file.close()
+	unittest.main()
+	#log_file = 'test_output1.txt'
+	#text_file = open(log_file,'w')
+	#runner = unittest.TextTestRunner(text_file)
+	#unittest.main(testRunner=runner)
+	#text_file.close()
 
 
