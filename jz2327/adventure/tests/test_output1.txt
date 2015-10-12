@@ -7,6 +7,6 @@ test_intransitive_commands_should_not_throw_exceptions (__main__.CommandTest) ..
 test_transitive_commands_should_not_throw_exceptions (__main__.CommandTest) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 4.185s
+Ran 7 tests in 4.246s
 
 OK

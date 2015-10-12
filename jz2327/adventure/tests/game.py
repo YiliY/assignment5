@@ -14,8 +14,8 @@ from operator import attrgetter
 from data import Data
 from model import Room, Message, Dwarf, Pirate
 
-YES_ANSWERS = ['y', 'yes']
-NO_ANSWERS = ['n', 'no']
+YES_ANSWERS = ('y', 'yes')
+NO_ANSWERS = ('n', 'no')
 
 class Game(Data):
 

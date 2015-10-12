@@ -86,5 +86,5 @@ def output_to_file(out=sys.stderr, verbosity=2):
     unittest.TextTestRunner(out,verbosity=verbosity).run(suite)
 
 if __name__ == '__main__':
-    with open('testresult2.txt','w') as f:
+    with open('test_output2.txt','w') as f:
         output_to_file(f)
