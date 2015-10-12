@@ -29,25 +29,25 @@ class CommandTest(unittest.TestCase):
             game.do_command([word, 'lamp'])
             
     def test__do_command_in_Game_class_is_correct_for_all_valid_answers(self):
-        for word in self.words:
+        answers_to_test = ['yes','y','no','n']
+        for answer in answers_to_test:
             game = Game()
             load_advent_dat(game)
             game.start()
-            
-            game.yesno_callback = self.assertTrue
-            game.do_command(['y'])
-            
-            game.yesno_callback = self.assertTrue
-            game.do_command(['yes'])
 
-            game.yesno_callback = self.assertFalse
-            game.do_command(['n'])
+            if answer in ['y', 'yes']:
+                game.yesno_callback = self.assertTrue
+                game.do_command([answer])
+            
+            elif answer in ['n', 'no']:
+                game.yesno_callback = self.assertFalse
+                game.do_command([answer])
 
-            game.yesno_callback = self.assertFalse
-            game.do_command(['no'])
+            else:
+                pass
 
 if __name__ == '__main__':
-	log_file = 'test_output1.txt'
+	log_file = 'test_output2.txt'
 	text_file = open(log_file,'w')
 	runner = unittest.TextTestRunner(text_file)
 	unittest.main(testRunner=runner)
