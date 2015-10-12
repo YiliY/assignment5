@@ -1,0 +1,6 @@
+y is true 
+yes is true 
+n is false 
+no is false 
+what
+PLEASE ANSWER THE QUESTION.
