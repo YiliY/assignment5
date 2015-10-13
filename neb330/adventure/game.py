@@ -15,10 +15,10 @@ from data import Data
 from model import Room, Message, Dwarf, Pirate
 
 #changed YESNO_ANSWERS dictionary to a function that will loop through new list of lists
-def YESNO_ANSWERS (words):
-    List = [['yes', True], ['yes', True], ['n', False], ['no', False]]
+def get_response(words):
+    YESNO_ANSWERS = [['yes', True], ['yes', True], ['n', False], ['no', False]]
     #this loop will work like the get function for dictionaries
-    for element in List:
+    for element in YESNO_ANSWERS:
         if words[0]==element[0]:
             return element[1]
         else:
@@ -442,7 +442,7 @@ class Game(Data):
     def _do_command(self, words):
         if self.yesno_callback is not None:
             #calling new function instead of YESNO_ANSWERS.get
-            answer = YESNO_ANSWERS(words[0])
+            answer = get_response(words[0])
             if answer is None:
                 if self.yesno_casual:
                     self.yesno_callback = None
