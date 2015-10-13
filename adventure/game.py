@@ -432,6 +432,7 @@ class Game(Data):
         return self.output
 
     def _do_command(self, words):
+        #Assign the correspondent boolean value to yes and no answer:
         if self.yesno_callback is not None:
             if words[0] in YES_ANSWERS:
                 answer = True
