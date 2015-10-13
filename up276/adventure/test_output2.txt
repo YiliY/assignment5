@@ -1,0 +1,17 @@
+
+Output after replacing YESNO_ANSWER directory by YESNO_ANSWER list and also making few changes in '_do_command' method
+to accomodate list values instead of directory values :
+
+Console :
+
+<terminated> O
+___________________________________________________________________________________________
+
+Finding files... done.
+Importing test modules ... done.
+
+----------------------------------------------------------------------
+Ran 3 tests in 18.350s
+
+OK
+____________________________________________________________________________________________

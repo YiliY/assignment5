@@ -14,7 +14,8 @@ from operator import attrgetter
 from data import Data
 from model import Room, Message, Dwarf, Pirate
 
-YESNO_ANSWERS = {'y': True, 'yes': True, 'n': False, 'no': False}
+#YESNO_ANSWERS = {'y': True, 'yes': True, 'n': False, 'no': False}
+YESNO_ANSWERS = ['y','yes','n','no']   #List having all yes,no answers
 
 class Game(Data):
 
@@ -432,7 +433,8 @@ class Game(Data):
 
     def _do_command(self, words):
         if self.yesno_callback is not None:
-            answer = YESNO_ANSWERS.get(words[0], None)
+            #answer = YESNO_ANSWERS.get(words[0], None)
+            answer = words[0] in YESNO_ANSWERS[:2]  #Assigns 'true' if word[0] is in ['y','yes'], else assigns 'False'
             if answer is None:
                 if self.yesno_casual:
                     self.yesno_callback = None
