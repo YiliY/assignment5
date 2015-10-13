@@ -1,0 +1,9 @@
+mint@mint-SATELLITE-L845 ~/DS/1007_DS_GA/Assignments/05/assignment5/fnd212/adventure/tests $ python -m unittest test_commands
+Affirmative answers test [OK]
+Negative answers test [OK]
+Other answers tests [OK]
+...
+----------------------------------------------------------------------
+Ran 3 tests in 3.448s
+
+OK

@@ -1,0 +1,9 @@
+mint@mint-SATELLITE-L845 ~/DS/1007_DS_GA/Assignments/05/assignment5/fnd212/adventure/tests $ python -m unittest -v test_commands
+test_do_command (test_commands.CommandTest) ... ok
+test_intransitive_commands_should_not_throw_exceptions (test_commands.CommandTest) ... ok
+test_transitive_commands_should_not_throw_exceptions (test_commands.CommandTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.466s
+
+OK
