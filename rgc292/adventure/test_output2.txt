@@ -1,0 +1,31 @@
+1-Output from test_commands.py
+
+Finding files... done.
+Importing test modules ... done.
+
+----------------------------------------------------------------------
+Ran 3 tests in 5.808s
+
+OK
+
+
+2-Output from test_data.py
+
+Finding files... done.
+Importing test modules ... done.
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.482s
+
+OK
+
+
+3-Output from test_walks.py
+
+Finding files... done.
+Importing test modules ... done.
+
+----------------------------------------------------------------------
+Ran 2 tests in 4.117s
+
+OK
