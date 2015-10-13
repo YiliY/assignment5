@@ -51,3 +51,30 @@ class CommandTest(TestCase):
 
     def test_answer_no(self)
 	# Test if the method prompts False for 'no'
+	game = Game()
+	load_advert_dat(game)
+	game.start()
+	# This will test if argument to callback is False
+	game.yesno_callback = self.assertFalse
+	# Run the actual test
+	game.do_command(['no'])
+
+    def test_answer_n(self)
+	# Test if the method prompts False for 'n'
+	game = Game()
+	load_advert_dat(game)
+	game.start()
+	# This will test if argument to callback is False
+	game.yesno_callback = self.assertFalse
+	# Run the actual test
+	game.do_command(['n'])
+
+    def test_answer_invalid(self)
+	# Test if the method prompts None for invalid answers
+	game = Game()
+	load_advert_dat(game)
+	game.start()
+	# This will test if argument to callback is None
+	game.yesno_callback = self.assertIsNone
+	# Run the actual test
+	game.do_command(['yo'])
