@@ -1,0 +1,18 @@
+test_all_no_commands (test_commands.CommandTest) ... ok
+test_all_yes_commands (test_commands.CommandTest) ... ok
+test_intransitive_commands_should_not_throw_exceptions (test_commands.CommandTest) ... ok
+test_transitive_commands_should_not_throw_exceptions (test_commands.CommandTest) ... ok
+/home/ds-ga-1007/git/assignment5/mtd368/adventure/tests/syntax.txt
+Doctest: syntax.txt ... ok
+/home/ds-ga-1007/git/assignment5/mtd368/adventure/tests/vignettes.txt
+Doctest: vignettes.txt ... ok
+test_hint (test_data.DataTest) ... ok
+test_long_description (test_data.DataTest) ... ok
+test_long_description_expands_tabs (test_data.DataTest) ... ok
+test_object_message_expands_tabs (test_data.DataTest) ... ok
+test_short_description (test_data.DataTest) ... ok
+test_move_repr_look_good (test_data.ReprTest) ... ok
+test_move_repr_works_on_all_moves (test_data.ReprTest) ... ok
+test_object_repr (test_data.ReprTest) ... ok
+test_room_repr (test_data.ReprTest) ... ok
+test_word_repr (test_data.ReprTest) ... ok
