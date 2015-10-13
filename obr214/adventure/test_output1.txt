@@ -1,0 +1,10 @@
+test_intransitive_commands_should_not_throw_exceptions (test_commands.CommandTest) ... ok
+test_invalid_commands_should_not_throw_exceptions (test_commands.CommandTest) ... ok
+test_transitive_commands_should_not_throw_exceptions (test_commands.CommandTest) ... ok
+test_valid_no_commands_should_return_false (test_commands.CommandTest) ... ok
+test_valid_yes_commands_should_return_true (test_commands.CommandTest) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 9.563s
+
+OK
