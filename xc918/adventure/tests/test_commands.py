@@ -1,0 +1,53 @@
+from unittest import TestCase
+from play import load_advent_dat
+from game import Game
+
+class CommandTest(TestCase):
+
+    def setUp(self):
+        game = Game()
+        load_advent_dat(game)
+        self.words = set(w.synonyms[0].text for w in game.vocabulary.values())
+        self.words.remove('suspend')
+
+    def test_intransitive_commands_should_not_throw_exceptions(self):
+        for word in self.words:
+            game = Game()
+            load_advent_dat(game)
+            game.start()
+            game.do_command(['no'])  # WOULD YOU LIKE INSTRUCTIONS?
+            game.do_command([word])
+
+    def test_transitive_commands_should_not_throw_exceptions(self):
+        for word in self.words:
+            game = Game()
+            load_advent_dat(game)
+            game.start()
+            game.do_command(['no'])  # WOULD YOU LIKE INSTRUCTIONS?
+            game.do_command(['enter'])  # so we are next to lamp
+            game.do_command([word, 'lamp'])
+
+    def test_do_command(self):
+	game = Game()
+	load_advent_dat(game)
+	game.start()
+	#give valid or invalid answers.
+	Valid_yes_answers = ['yes','y']
+	Valid_no_answers = ['no','n']
+	Invalid_answers = ['NOT','Sure','random','up to you']
+	#test word in Valid_yes_answers
+	for word in Valid_yes_answers:
+	    game.yesno_callback = self.assertTrue
+	    game.do_command([word])
+	#test word in Valid_no_answers
+	for word in Valid_no_answers:
+	    game.yesno_callback = self.assertFalse
+	    game.do_command([word])	
+	#test word is invalid.
+	for word in Invalid_answers:
+	    game.yesno_callback = self.assertIsNone
+	    game.do_command([word])
+
+
+if __name__ == '__main__':
+	unittest.main()
