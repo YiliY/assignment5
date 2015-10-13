@@ -1,0 +1,15 @@
+
+Output after adding the "test_do_command_method_for_Yesno_answers" test method :
+
+Console :
+
+<terminated> O
+___________________________________________________________________________________________
+
+Finding files... done.
+Importing test modules ... done.
+
+----------------------------------------------------------------------
+Ran 3 tests in 18.821s
+OK
+____________________________________________________________________________________________
