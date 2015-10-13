@@ -58,15 +58,14 @@ class CommandTest(TestCase):
             self.setUp_test_do_command(testGame)
             testGame._do_command([testAnswer])
             self.assertTrue(self._do_command_testResult)
-        print('Affirmative answers test [OK]')
+        
         for testAnswer in negativeAnswers:    
             self.setUp_test_do_command(testGame)
             testGame._do_command([testAnswer])
             self.assertFalse(self._do_command_testResult)  
-        print('Negative answers test [OK]')
-
+        
         for testAnswer in otherAnswers: 
             self.setUp_test_do_command(testGame)
             testGame._do_command([testAnswer])
             self.assertIsNone(self._do_command_testResult)  
-        print('Other answers tests [OK]')
+        
