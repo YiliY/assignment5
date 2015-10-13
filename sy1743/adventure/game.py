@@ -15,9 +15,10 @@ from data import Data
 from model import Room, Message, Dwarf, Pirate
 from collections import Counter
 
-# YESNO_ANSWERS = {'y': True, 'yes': True, 'n': False, 'no': False}
+# Two lists of yes commands and no commands
 YES_ANSWERS = ['y', 'yes']
 NO_ANSWERS = ['n', 'no']
+
 
 class Game(Data):
 
@@ -435,13 +436,12 @@ class Game(Data):
 
     def _do_command(self, words):
         if self.yesno_callback is not None:
-            # answer = YESNO_ANSWERS.get(words[0], None)
         # The code below is modified. By using if statement to handle
-        # the input answer. Word[0] will only read the first letter 
+        # the input answer. 
             answer = None
-            if words[0] in YES_ANSWERS:
+            if words[0] in YES_ANSWERS: # Check whether input is in yes_answer
                 answer = True
-            if words[0] in NO_ANSWERS:
+            if words[0] in NO_ANSWERS:  # Check whether input is in no_answer
                 answer = False
 
             if answer is None:
