@@ -14,7 +14,7 @@ from operator import attrgetter
 from data import Data
 from model import Room, Message, Dwarf, Pirate
 
-YESNO_ANSWERS = {'y': True, 'yes': True, 'n': False, 'no': False}
+#YESNO_ANSWERS = {'y': True, 'yes': True, 'n': False, 'no': False} #No longer user a dictionary
 YES_NO_INPUT = ['y','yes','n','no'] # Valid User Input when yesno callback attribute is set
 class Game(Data):
 
