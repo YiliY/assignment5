@@ -14,7 +14,12 @@ from operator import attrgetter
 from data import Data
 from model import Room, Message, Dwarf, Pirate
 
-YESNO_ANSWERS = {'y': True, 'yes': True, 'n': False, 'no': False}
+# YESNO_ANSWERS changed from one dictionary to 
+# two lists of strings identifying the affirmative and negative answers. 
+
+YES_ANSWERS = ['y', 'yes']
+NO_ANSWERS = ['n','no']
+
 
 class Game(Data):
 
@@ -432,7 +437,16 @@ class Game(Data):
 
     def _do_command(self, words):
         if self.yesno_callback is not None:
-            answer = YESNO_ANSWERS.get(words[0], None)
+
+            # Check if words[0] is a possitive or negative answer
+            # and set the variable answer accordingly. 
+            if words[0] in YES_ANSWERS:
+                answer = True
+            elif words[0] in NO_ANSWERS:
+                answer = False
+            else:
+                answer = None
+            
             if answer is None:
                 if self.yesno_casual:
                     self.yesno_callback = None
