@@ -439,7 +439,6 @@ class Game(Data):
                 answer = YESNO_ANSWERS[2][1]
             else:
                 answer = None
-
             if answer is None:
                 if self.yesno_casual:
                     self.yesno_callback = None

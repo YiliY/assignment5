@@ -60,7 +60,7 @@ class CommandTest(TestCase):
         game.yesno_callback = self.assertFalse
         game.do_command(['no'])
         
-    def test_do_commands_for_the_case_invalid_answer(self):
+    def test_do_commands_for_the_case_none(self):
         game = Game()
         load_advent_dat(game)
         game.start()
