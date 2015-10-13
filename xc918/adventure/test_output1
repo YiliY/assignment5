@@ -1,0 +1,7 @@
+python -m unittest test_commands
+Ran 3 tests in 2.240s
+
+python -m unittest discover
+
+Ran 15 tests in 3.875s
+

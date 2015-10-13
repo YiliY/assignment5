@@ -42,8 +42,8 @@ class CommandTest(TestCase):
 	#test word in Valid_no_answers
 	for word in Valid_no_answers:
 	    game.yesno_callback = self.assertFalse
-	    game.do_command([word])	
 	#test word is invalid.
+	    game.do_command([word])	
 	for word in Invalid_answers:
 	    game.yesno_callback = self.assertIsNone
 	    game.do_command([word])
