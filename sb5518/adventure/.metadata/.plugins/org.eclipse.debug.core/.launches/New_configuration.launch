@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType">
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="/home/sb5518/Desktop/Repository/homework5/assignment5/sb5518/adventure/tests/test_commands.py"/>
+</launchConfiguration>
