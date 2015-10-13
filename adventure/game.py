@@ -434,12 +434,12 @@ class Game(Data):
     def _do_command(self, words):
         if self.yesno_callback is not None:
             if words[0] in YES_ANSWERS:
-                answer = words[0]
+                answer = True
             elif words[0] in NO_ANSWERS:    
-                 answer =words[0]
+                 answer = False
             else:
-                answer=None            
-            
+                answer=None    
+                
             if answer is None:
                 if self.yesno_casual:
                     self.yesno_callback = None
