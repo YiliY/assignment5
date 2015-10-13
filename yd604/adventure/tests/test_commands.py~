@@ -66,4 +66,4 @@ class CommandTest(TestCase):
         game.start()
 	# This will test if argument to callback is invalid
         game.yesno_callback = self.assertIsNone
-        game.do_command(['None'])
+        game.do_command(['invalid'])

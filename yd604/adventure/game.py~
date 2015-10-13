@@ -14,7 +14,6 @@ from operator import attrgetter
 from data import Data
 from model import Room, Message, Dwarf, Pirate
 
-# Modify the method to use the data type tuple
 YESNO_ANSWERS = [('y',True),('yes',True),('n',False),('no',False)]
 
 class Game(Data):
