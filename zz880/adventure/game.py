@@ -15,6 +15,7 @@ from data import Data
 from model import Room, Message, Dwarf, Pirate
 
 YESNO_ANSWERS = {'y': True, 'yes': True, 'n': False, 'no': False}
+YESNO_ANSWERS1 = [('y',True),('yes',True),('n',False),('no',False)]
 
 class Game(Data):
 
@@ -432,7 +433,13 @@ class Game(Data):
 
     def _do_command(self, words):
         if self.yesno_callback is not None:
-            answer = YESNO_ANSWERS.get(words[0], None)
+            #answer = YESNO_ANSWERS.get(words[0], None)
+	    #set default value
+	    answer = None
+	    for yes_no_output in YESNO_ANSWERS1:
+		if yes_no_output[0] == words[0]:
+		    answer = yes_no_output[1]
+	    #if the input is not in the list of YESNO_ANSWERS1, return the default value None
             if answer is None:
                 if self.yesno_casual:
                     self.yesno_callback = None
