@@ -1,0 +1,9 @@
+test_do_command (test_commands.CommandTest) ... ok
+test_intransitive_commands_should_not_throw_exceptions (test_commands.CommandTest) ... ok
+test_transitive_commands_should_not_throw_exceptions (test_commands.CommandTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.357s
+
+OK
+
