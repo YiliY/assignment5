@@ -1,0 +1,13 @@
+For the valid input answer 'y', TestCase assertTrue function succeeded.
+For the valid input answer 'yes', TestCase assertTrue function succeeded.
+For the valid input answer 'n', TestCase assertFalse function succeeded.
+For the valid input answer 'no', TestCase assertFalse function succeeded.
+For the invalid input answer 'typo', TestCase assertEqual function succeeded.
+For the invalid input answer 'sure why not', TestCase assertEqual function succeeded.
+For the invalid input answer 'okay', TestCase assertEqual function succeeded.
+For the invalid input answer '129jio43w2', TestCase assertEqual function succeeded.
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 9.685s
+
+OK
