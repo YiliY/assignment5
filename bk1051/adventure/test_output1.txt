@@ -1,0 +1,8 @@
+test_intransitive_commands_should_not_throw_exceptions (tests.test_commands.CommandTest) ... ok
+test_only_allow_valid_responses_to_yesno_questions (tests.test_commands.CommandTest) ... ok
+test_transitive_commands_should_not_throw_exceptions (tests.test_commands.CommandTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.288s
+
+OK
