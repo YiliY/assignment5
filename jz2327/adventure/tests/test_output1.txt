@@ -1,0 +1,12 @@
+test_do_command_yesno_callback_invalid_words (__main__.CommandTest) ... ok
+test_do_command_yesno_callback_n (__main__.CommandTest) ... ok
+test_do_command_yesno_callback_no (__main__.CommandTest) ... ok
+test_do_command_yesno_callback_y (__main__.CommandTest) ... ok
+test_do_command_yesno_callback_yes (__main__.CommandTest) ... ok
+test_intransitive_commands_should_not_throw_exceptions (__main__.CommandTest) ... ok
+test_transitive_commands_should_not_throw_exceptions (__main__.CommandTest) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 4.246s
+
+OK
