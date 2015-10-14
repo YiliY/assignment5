@@ -1,0 +1,7 @@
+Finding files... done.
+Importing test modules ... done.
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.397s
+
+OK
