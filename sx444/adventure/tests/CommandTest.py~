@@ -1,0 +1,8 @@
+
+
+game = Game()
+game.yesno_callback = self.assertTrue
+game.do_command(['y'])
+game.do_command(['yes'])
+game.do_command(['n'])
+game.do_command(['no'])
