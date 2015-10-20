@@ -28,22 +28,17 @@ class CommandTest(TestCase):
             game.do_command(['enter'])  # so we are next to lamp
             game.do_command([word, 'lamp'])
     
-    def test_do_command_for_yesno_answer(self):
+   
+    def test_check_do_command(self):
         game =Game()
-        #Test positive answers:
         game.yesno_callback=self.assertTrue         
         game._do_command(['y'])
         game.yesno_callback=self.assertTrue
         game._do_command(['yes'])
-        #Test negative answers:
         game.yesno_callback=self.assertFalse
         game._do_command(['no'])
         game.yesno_callback=self.assertFalse
         game._do_command(['n'])
-        #Test positive and negative answer with typos: 
-        game.yesno_callback=self.assertTrue
-        game._do_command(['yess'])
-        game.yesno_callback=self.assertFalse
-        game._do_command(['nox'])        
+        
 if __name__ == '__main__':
     unittest.main()   
